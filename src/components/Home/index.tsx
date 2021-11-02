@@ -37,6 +37,7 @@ import {
   FunctionsIcon,
   HostingIcon,
   PubSubIcon,
+  RemoteConfigIcon,
   StorageIcon,
 } from '../common/icons';
 import { Spinner } from '../common/Spinner';
@@ -58,6 +59,7 @@ export default Home;
 const Overview: React.FC<{
   config: Partial<Config>;
 }> = ({ config }) => {
+  console.log(config);
   return (
     <GridCell span={12}>
       <GridRow>
@@ -87,6 +89,13 @@ const Overview: React.FC<{
           config={config.database}
           linkTo="/database"
           testId="emulator-info-database"
+        />
+        <EmulatorCard
+          name="Remote Config emulator"
+          icon={<RemoteConfigIcon theme="secondary" />}
+          config={config["remote config"]}
+          linkTo="/remote-config"
+          testId="emulator-info-remote-config"
         />
         <EmulatorCard
           name="Functions emulator"
