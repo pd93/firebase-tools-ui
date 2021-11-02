@@ -41,7 +41,8 @@ export type Emulator =
   | 'logging'
   | 'hosting'
   | 'storage'
-  | 'pubsub';
+  | 'pubsub'
+  | 'remote config';
 
 export interface Config {
   projectId: string;
