@@ -1,5 +1,24 @@
 {
   "//": "This is needed for tests, as storage emulator requires rules",
-  "storage": { "rules": "storage.rules" },
-  "firestore": {}
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "firestore": {},
+  "emulators": {
+    "firestore": {
+      "port": 8080
+    },
+    "storage": {
+      "port": 9199
+    },
+    "remote config": {
+      "port": 9200
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
+  }
 }
