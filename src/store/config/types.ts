@@ -42,7 +42,7 @@ export type Emulator =
   | 'hosting'
   | 'storage'
   | 'pubsub'
-  | 'remote config';
+  | 'remoteconfig';
 
 export interface Config {
   projectId: string;
@@ -54,5 +54,5 @@ export interface Config {
   hosting?: EmulatorConfig;
   storage?: EmulatorConfig;
   pubsub?: EmulatorConfig;
-  ['remote config']?: EmulatorConfig;
+  ['remoteconfig']?: EmulatorConfig;
 }
